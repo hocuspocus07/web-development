@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+body::before{
+    top: 0;
+    content: "";
+    position: absolute;
+    height: 150vh;
+    width: 100%;
+    background: url('https://images.unsplash.com/photo-1477332552946-cfb384aeaf1c?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    z-index: -1;
+}
+.container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+#logo {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 120px;
+    margin-bottom: 10px;
+    font-family: "Roboto Slab", serif;
+    color: rgb(255, 0, 0);
+}
+.cursor {
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+#nav {
+    display: flex;
+    font-family: "Oswald", sans-serif;
+}
+
+input[type="date"] {
+    margin-top: 35px;
+    width: 180px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+input[type="text"] {
+    margin-top: 10px;
+    width: 180px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    font-size: 20px;
+}
+
+#submit {
+    width: 62%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    font-family: "Oswald", sans-serif;
+}
+#submit:hover {
+    background-color: #45a049;
+    cursor: pointer; 
+    font-weight: bolder;
+}
+
+#table {
+    width: 95vw;
+    margin: 20px;
+    text-align: center;
+    border-collapse: collapse;
+    font-family: "Bebas Neue", sans-serif;
+    color: rgb(168, 16, 145);
+    font-size: 22px;
+    font-optical-sizing: auto;
+    font-weight: 700;
+}
+
+td,
+th {
+    border: 5px solid #dddddd;
+    text-align: left;
+    padding: 20px;
+}
+
+.deleteimg:hover {
+    filter: brightness(85%);
+    cursor: pointer;
+}

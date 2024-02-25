@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+#logo{
+    font-size: 150px;
+}
+#aboutUs{
+    text-align: center;
+    font-size: 20px;
+    margin: 10px;
+    font-style: italic;
+}
+#maincontent{
+    display: flex;
+}
+.elements{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    margin: 20px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 12px;
+    transition-duration: 1s;
+}
+.elements:hover{
+    background-color: darkblue;
+    font-weight: bold;
+}
+.elements h1{
+    margin-top: 5px;
+}
+.elements p{
+    margin: 7px;
+}
+.elements .pfp{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+.connections img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 10px;
+}
+.connections .github {
+    filter: invert(100%);
+}

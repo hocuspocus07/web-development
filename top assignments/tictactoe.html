@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let gameover = false;
+        let gameboard = [
+            ['', '', '',],
+            ['', '', '',],
+            ['', '', '',]];
+        function CompChoice() {
+            let vert, hori;
+            do {
+                vert = parseInt(3 * Math.random());
+                hori = parseInt(3 * Math.random());
+            } while (gameboard[vert][hori] != '');
+            gameboard[vert][hori] = 'X';
+        }
+        function UserChoice() {
+            let userchoicecol, userchoicerow;
+            do {
+                userchoicerow = prompt("enter row:");
+                userchoicecol = prompt("enter col:");
+            } while (gameboard[userchoicerow][userchoicecol] != '');
+            gameboard[userchoicerow][userchoicecol] = 'O';
+        }
+        function printGameboard() {
+            console.log('Current Gameboard:');
+            for (let row of gameboard) {
+                console.log(row.join(' | '));
+            }
+        }
+        function win() {
+            for (let i = 0; i < 3; i++) {
+                if ((gameboard[i][0] === 'X' && gameboard[i][1] === 'X' && gameboard[i][2] === 'X') ||
+                    (gameboard[0][i] === 'X' && gameboard[1][i] === 'X' && gameboard[2][i] === 'X')) {
+                    console.log("Computer wins!");
+                    return true;
+                }
+            }
+            if ((gameboard[0][0] === 'X' && gameboard[1][1] === 'X' && gameboard[2][2] === 'X') ||
+                (gameboard[0][2] === 'X' && gameboard[1][1] === 'X' && gameboard[2][0] === 'X')) {
+                console.log("Computer wins!");
+                return true;
+            }
+
+            for (let i = 0; i < 3; i++) {
+                if ((gameboard[i][0] === 'O' && gameboard[i][1] === 'O' && gameboard[i][2] === 'O') ||
+                    (gameboard[0][i] === 'O' && gameboard[1][i] === 'O' && gameboard[2][i] === 'O')) {
+                    console.log("You win");
+                    return true;
+                }
+            }
+            if ((gameboard[0][0] === 'O' && gameboard[1][1] === 'O' && gameboard[2][2] === 'O') ||
+                (gameboard[0][2] === 'O' && gameboard[1][1] === 'O' && gameboard[2][0] === 'O')) {
+                console.log("You win!");
+                return true;
+            }
+        }
+        while (!gameover) {
+            CompChoice();
+            printGameboard();
+            if (win()) {
+                gameover = true;
+                break;
+            }
+
+
+            UserChoice();
+            printGameboard();
+            if (win()) {
+                gameover = true;
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>

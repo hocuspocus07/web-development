@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Tracker</title>
+    <link rel="icon" type="image/x-icon" href="iconsltrack.png">
+    <link rel="stylesheet" href="slstyling.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Honk&family=Kode+Mono:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div id="logo">Sleep Tracker
+        </div>
+        <div id="msg">
+            <p>Enter your sleep data to see how your sleep patterns change over time.</p>
+        </div>
+        <div id="input">
+            <form><label>Date : <input type="date" id="date"></label>
+                <label>Hours of Sleep : <input type="text" id="hours"></label>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </form>
+        </div>
+        <br>
+        <div>
+            <table id="table">
+                <tr class="titles">
+                    <th>S.no.</th>
+                    <th>Date</th>
+                    <th>Hours of Sleep</th>
+                    <th>Remark</th>
+                    <th>Delete</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="slscript.js"></script>
+</body>
+
+</html>
